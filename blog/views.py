@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-from . import models
+from .models import Blog
 
 def blogs_home(request):
-    blogs = models.Blog.objects
+    blogs = Blog.objects
     return render(request, 'blog/blogs_home.html', {'blogs': blogs, 'teste': [1,2,3] })
