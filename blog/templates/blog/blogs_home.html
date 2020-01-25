@@ -56,9 +56,9 @@
             <h2>Latest post</h2>
             <hr/>
             {% for blog in blogs.all %}
-            <a href="#"><h3>{{ blog.title }}</h3></a>
+            <a href="{{ blog.pk }}"><h3>{{ blog.title }}</h3></a>
             <p>{{ blog.pub_date_pretty }}</p>
-            <img src="{{ blog.image.url }}" alt="{{ blog.title }}" height="200" width="200">
+            <a href="{{ blog.pk }}"><img src="{{ blog.image.url }}" alt="{{ blog.title }}" height="200" width="200"></a>
             <p>{{ blog.summary }}</p>
             {% endfor %}
         </div>
