@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -41,7 +42,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
                     <a class="nav-item nav-link" href="#">Twitter</a>
-                    <a class="nav-item nav-link" href="#">Resume</a>
+                    <a class="nav-item nav-link" href="{% static "resume.pdf" %}">Resume</a>
                     <a class="nav-item nav-link" href="{% url 'blogs_home' %}">Blog</a>
                 </div>
             </div>
@@ -54,6 +55,7 @@
             <div class="container">
                 <h1 class="jumbotron-heading">Hi...</h1>
                 <p class="lead text-muted">My name is João and this is my portfolio :)</p>
+                <img src="{% static "me.jpg" %}" alt="Me" height="200">
                 <p>
                     <a href="mailto:joaop.congiomartins@gmail.com" class="btn btn-primary my-2">Contact me</a>
                 </p>
